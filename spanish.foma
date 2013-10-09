@@ -1,0 +1,35 @@
+### spanish.foma ###
+
+# Vowels
+define V [ a | e | i | o | u ];
+
+# Consonants
+define C [ b | c | c h | d | f | g | h | j | k | l | l l | m | n | ñ | p | q | r | s | t | v | w | x | z ];
+
+read lexc spanish.lexc
+define Lexicon;
+
+# Consonant doubling: 1-letter consonant doubled before -ing/-ed (beg/begging)
+define ConsonantDoubling g -> g g || _ "^" [i n g | e d ];
+
+# A replacement: -o changes to -a,
+define AReplacement o -> 0 || _ "^" a;
+
+# E insertion e added after consonants before s
+# examples: papel^s:papeles; pez^s:peces; nariz^s:narices
+define EInsertion z -> c || _ "^" s .o. [..] -> e || C _ "^" s ;
+
+# Cleanup: remove morpheme boundaries
+define Cleanup "^" -> 0;
+
+read lexc spanish.lexc
+define Lexicon
+
+define Grammar Lexicon          .o.
+	       AReplacement	.o.
+               EInsertion	.o.
+	       Cleanup;
+
+define Exceptions [[{make} "+V" "+Past" .x. {made}] | [{make} "+V" "+PastPart" .x. {made}]] ;
+
+regex Grammar ;

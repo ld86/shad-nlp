@@ -1,0 +1,54 @@
+Multichar_Symbols +N +V +A @P.FM.ON@ @D.FM@ @C.FM@
+
+LEXICON Root
+
+Noun ;
+Verb ;
+@P.FM.ON@:@P.FM.ON@ Adj ;
+
+LEXICON Noun
+
+abarcadura Ninf;
+berrido Ninf;
+berrinche Ninf;
+papel Ninf;
+pez Ninf;
+nariz Ninf;
+
+LEXICON Verb
+
+ab Vinf;
+abajar Vinf;
+abatir Vinf;
+absolver Vinf;
+
+LEXICON Adj
+
+abacial Ainf;
+@C.FM@abaritonado Ainf;
+
+LEXICON Ninf
+
++N:0 #;
++N:^s #;
+
+LEXICON Vinf
+
+ar+V:ar #;
+ar+V:^o #;
+ar+V:^as #;
+ar+V:^a #;
+ar+V:^amos #;
+ar+V:^áis #;
+ar+V:^an #;
+
++V:^es #;
++V:^e #;
+
+LEXICON Ainf
+
++A:0 #;
++A:^s #;
+@D.FM@+A:^a@D.FM@ #;
+@D.FM@+A:^as@D.FM@ #;
+
