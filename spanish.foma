@@ -10,19 +10,19 @@ read lexc spanish.lexc
 define Lexicon;
 
 # ERReplacement
-define ERReplacement  e r  -> i r || _ "^" [s t e | d o | s t e i s | ó];
+define ERReplacement  e r  -> i r || _ "^" [s t e | d o | s t e i s | ó].#.;
 
 # IRReplacement
-define IRReplacement  i r  -> e r || _ "^" [n | s];
+define IRReplacement  i r  -> e r || _ "^" [n | s].#.;
 
 # IEReplacement
-define IEReplacement  [ e r | i r ]  -> i e || _ "^" r o n;
+define IEReplacement  [ e r | i r ]  -> i e || _ "^" [ r o n | r e ];
 
 # Preterito Imperfecto de Indicativo
 define PreteritoImperfecto [ e r | i r ] -> í || _ "^" [ a | a s | a m o s | a i s | a n ] .o. a r -> a b || _ "^" [ a | a s | a m o s | a i s | a n ];
 
 # R deletion
-define RDeletion r -> 0 || _"^" [m o s | s | n | d o | s t e | r o n | s t e i s];
+define RDeletion r -> 0 || _"^" [m o s | s | n | d o | s t e | r o n | s t e i s | ó | r e];
 
 # Presente de Indicativo
 define Presente [a r | e r | i r] -> 0 || _ "^" o;

@@ -4,7 +4,7 @@ LEXICON Root
 
 Noun ;
 Verb ;
-@P.FM.ON@:@P.FM.ON@ Adj ;
+Adj ;
 
 LEXICON Noun
 
@@ -25,7 +25,7 @@ absolver Vinf;
 LEXICON Adj
 
 abacial Ainf;
-@C.FM@abaritonado Ainf;
+abaritonado Ainf;
 
 LEXICON Ninf
 
@@ -52,10 +52,16 @@ LEXICON Vinf
 +V:^ais #;
 +V:^an #;
 
++V:^re #;
++V:^res #;
++V:^remos #;
++V:^reis #;
++V:^ren #;
+
 LEXICON Ainf
 
 +A:0 #;
 +A:^s #;
-@D.FM@+A:^a@D.FM@ #;
-@D.FM@+A:^as@D.FM@ #;
++A:^a #;
++A:^as #;
 
