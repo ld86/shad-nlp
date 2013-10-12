@@ -9,6 +9,9 @@ define C [ b | c | c h | d | f | g | h | j | k | l | l l | m | n | ñ | p | q | 
 read lexc spanish.lexc
 define Lexicon;
 
+#
+define PreferitoSimple "^" í -> "^" é || a r _ .o. "^" i m o s -> "^" m o s || a r _;
+
 # ERReplacement
 define ERReplacement  e r  -> i r || _ "^" [s t e | d o | s t e i s | ó].#.;
 
@@ -25,7 +28,7 @@ define PreteritoImperfecto [ e r | i r ] -> í || _ "^" [ a | a s | a m o s | a 
 define RDeletion r -> 0 || _"^" [m o s | s | n | d o | s t e | r o n | s t e i s | ó | r e | r a | s e | d ];
 
 # Presente de Indicativo
-define VerbDeletion [a r | e r | i r] -> 0 || _ "^" [ o | í a | a | e ];
+define VerbDeletion [a r | e r | i r] -> 0 || _ "^" [ o | í | í a | a | e | é | á s | á | e m o s | i m o s | é i s | á n ];
 
 # Presente de Indicativo
 define Preterito a r -> 0 || _ "^" ó;
@@ -44,6 +47,7 @@ read lexc spanish.lexc
 define Lexicon
 
 define Grammar  Lexicon         .o.
+		PreferitoSimple .o.
 		ERReplacement	.o.
 		IRReplacement	.o.
 		IEReplacement	.o.

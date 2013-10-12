@@ -22131,8 +22131,10 @@ LEXICON Vinf
 +V:^mos #;
 +V:^n #;
 
++V:^í #;
 +V:^ste #;
 +V:^ó #;
++V:^imos #;
 +V:^steis #;
 +V:^ron #;
 
@@ -22141,6 +22143,13 @@ LEXICON Vinf
 +V:^amos #;
 +V:^ais #;
 +V:^an #;
+
++V:^é #;
++V:^ás #;
++V:^á #;
++V:^emos #;
++V:^éis #;
++V:^án #;
 
 +V:^re #;
 +V:^res #;
