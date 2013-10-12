@@ -16,7 +16,7 @@ define SIReplacement a r -> é || _ "^" i s.#. .o. [ e r | i r ] -> á || _ "^" 
 define PreferitoSimple "^" í -> "^" é || a r _ .o. "^" i m o s -> "^" m o s || a r _;
 
 # ERReplacement
-define ERReplacement  e r  -> i r || _ "^" [s t e | d o | s t e i s | ó].#.;
+define ERReplacement  e r  -> i r || _ "^" [s t e | d o | d a | s t e i s | ó];
 
 # IRReplacement
 define IRReplacement  i r  -> e r || _ "^" [n | s].#.;
@@ -28,7 +28,7 @@ define IEReplacement  [ e r | i r ]  -> i e || _ "^" [ r o n | r e | r a | s e |
 define PreteritoImperfecto [ e r | i r ] -> í || _ "^" [ a | a s | a m o s | a i s | a n ] .o. a r -> a b || _ "^" [ a | a s | a m o s | a i s | a n ]; 
 
 # R deletion
-define RDeletion r -> 0 || _"^" [m o s | s | n | d o | s t e | r o n | s t e i s | ó | r e | r a | s e | d ];
+define RDeletion r -> 0 || _"^" [m o s | s | n | d | s t e | r o n | s t e i s | ó | r e | r a | s e ];
 
 # Presente de Indicativo
 define VerbDeletion [a r | e r | i r] -> 0 || _ "^" [ o | í | í a | a | e | é | á s | á | e m o s | i m o s | é i s | á n ];

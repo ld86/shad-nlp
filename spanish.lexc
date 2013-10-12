@@ -22121,6 +22121,9 @@ LEXICON Ninf
 LEXICON Vinf
 
 +V:^do #;
++V:^da #;
++V:^das #;
++V:^dos #;
 
 +V:^ndo #;
 
