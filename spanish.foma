@@ -52,16 +52,16 @@ read lexc spanish.lexc
 define MainLexicon;
 
 define Grammar MainLexicon .o.
-		PreferitoSimple .o.
-		ERReplacement	.o.
-		IRReplacement	.o.
-		IEReplacement	.o.
-		PreteritoImperfecto .o.
-		Preterito	.o.
-		VerbDeletion	.o.
-		RDeletion	.o.
-		AReplacement	.o.
-		EInsertion	.o.    
+        PreferitoSimple .o.
+        ERReplacement   .o.
+        IRReplacement   .o.
+        IEReplacement   .o.
+        PreteritoImperfecto .o.
+        Preterito       .o.
+        EInsertion      .o.
+        VerbDeletion    .o.
+        RDeletion       .o.
+        AReplacement    .o.    
 		Cleanup;
 
 define Exceptions [[{make} "+V" "+Past" .x. {made}] | [{make} "+V" "+PastPart" .x. {made}]] ;
