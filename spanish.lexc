@@ -22153,6 +22153,8 @@ LEXICON Vinf
 +V:^éis #;
 +V:^án #;
 
++V:^is #;
+
 +V:^re #;
 +V:^res #;
 +V:^remos #;
@@ -22183,4 +22185,6 @@ LEXICON Ainf
 +A:^s #;
 +A:^a #;
 +A:^as #;
++A:^ísimo #;
++A:^ísima #;
 
