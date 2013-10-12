@@ -10,6 +10,9 @@ read lexc spanish.lexc
 define Lexicon;
 
 #
+define SIReplacement a r -> é || _ "^" i s.#. .o. [ e r | i r ] -> á || _ "^" i s.#.;
+
+#
 define PreferitoSimple "^" í -> "^" é || a r _ .o. "^" i m o s -> "^" m o s || a r _;
 
 # ERReplacement
@@ -38,7 +41,7 @@ define AReplacement o -> 0 || _ "^" a;
 
 # E insertion e added after consonants before s
 # examples: papel^s:papeles; pez^s:peces; nariz^s:narices
-define EInsertion z -> c || _ "^" s .o. [..] -> e || C _ "^" s ;
+define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] C & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
 
 # Cleanup: remove morpheme boundaries
 define Cleanup "^" -> 0;
