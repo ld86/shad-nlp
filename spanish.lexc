@@ -22115,6 +22115,8 @@ LEXICON Ninf
 
 +N:0 #;
 +N:^s #;
++N:^a #;
++N:^as #;
 
 LEXICON Vinf
 
