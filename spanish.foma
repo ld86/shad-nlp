@@ -51,7 +51,7 @@ define GuessLexicon;
 read lexc spanish.lexc
 define MainLexicon;
 
-define Grammar  [MainLexicon .o.
+define Grammar MainLexicon .o.
 		PreferitoSimple .o.
 		ERReplacement	.o.
 		IRReplacement	.o.
