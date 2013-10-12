@@ -20523,6 +20523,12 @@ LEXICON Vinf
 
 +V:^do #;
 
++V:^ndo #;
+
++V:^a #;
++V:^e #;
++V:^d #;
+
 +V:^o #;
 +V:^s #;
 +V:^mos #;
@@ -20544,6 +20550,24 @@ LEXICON Vinf
 +V:^remos #;
 +V:^reis #;
 +V:^ren #;
+
++V:^ra #;
++V:^ras #;
++V:^ramos #;
++V:^rais #;
++V:^ran #;
+
++V:^se #;
++V:^ses #;
++V:^semos #;
++V:^seis #;
++V:^sen #;
+
++V:^ía #;
++V:^ías #;
++V:^íamos #;
++V:^íais #;
++V:^ían #;
 
 LEXICON Ainf
 
