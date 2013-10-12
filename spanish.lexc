@@ -17,7 +17,7 @@ nariz Ninf;
 
 LEXICON Verb
 
-ab Vinf;
+abar Vinf;
 abajar Vinf;
 abatir Vinf;
 absolver Vinf;
@@ -34,16 +34,23 @@ LEXICON Ninf
 
 LEXICON Vinf
 
-ar+V:ar #;
-ar+V:^o #;
-ar+V:^as #;
-ar+V:^a #;
-ar+V:^amos #;
-ar+V:^áis #;
-ar+V:^an #;
++V:^do #;
 
-+V:^es #;
-+V:^e #;
++V:^o #;
++V:^s #;
++V:^mos #;
++V:^n #;
+
++V:^ste #;
++V:^ó #;
++V:^steis #;
++V:^ron #;
+
++V:^a #;
++V:^as #;
++V:^amos #;
++V:^ais #;
++V:^an #;
 
 LEXICON Ainf
 
