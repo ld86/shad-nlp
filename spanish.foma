@@ -9,6 +9,9 @@ define C [ b | c | c h | d | f | g | h | j | k | l | l l | m | n | ñ | p | q | 
 read lexc spanish.lexc
 define Lexicon;
 
+# YInsertion
+define YInsertion [..] -> y || u _ i r "^" [ o | a | e ];
+
 #
 define SIReplacement a r -> é, [ e r | i r ] -> á || _ "^" i s.#.;
 
@@ -64,6 +67,7 @@ read lexc spanish.lexc
 define MainLexicon;
 
 define Grammar MainLexicon .o.
+        YInsertion      .o.
 	SIReplacement	.o.
         PreferitoSimple .o.
         ERReplacement   .o.
