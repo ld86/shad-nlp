@@ -10,7 +10,7 @@ read lexc spanish.lexc
 define Lexicon;
 
 # YInsertion
-define YInsertion [..] -> y || u _ i r "^" [ o | a | e ];
+define YInsertion [..] -> y || u _ i r "^" [ o | a | e | r a | n d o | r o n | ó ], u _ i r "^" [ s | n ].#.;
 
 #
 define SIReplacement a r -> é, [ e r | i r ] -> á || _ "^" i s.#.;
@@ -28,7 +28,7 @@ define ERReplacement  e r  -> i r || _ "^" [ s t e | d o | d a | s t e i s | ó 
 define IRReplacement  i r  -> e r || _ "^" [ n | s ].#.;
 
 # IEReplacement
-define IEReplacement  [ e r | i r ]  -> i e || _ "^" [ r o n | r e | r a | s e | n d o] .o. e -> é, a r -> á || _ "^" [ r a m o s | s e m o s | r e m o s];
+define IEReplacement [ e r | i r ]  -> i e || _ "^" [ r o n | r e | r a | s e | n d o] .o. e -> é, a r -> á || _ "^" [ r a m o s | s e m o s | r e m o s];
 
 # Preterito Imperfecto de Indicativo
 define PreteritoImperfecto [ e r | i r ] -> í, a r -> a b || _ "^" [ a | a s | a i s | a n ].#. .o. a r -> á b || _ "^" a m o s.#.; 
@@ -59,6 +59,9 @@ define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] C & ~[[a | e | i
 define ZInsertion1 [..] -> z || _ c e r  "^" [ o | a | a s | a m o s | á i s | a n ];
 define Zinsertion2 [..] -> z || d u _ c i r  "^" [ o | a | a s | a m o s | á i s | a n ];
 
+# YCleanup
+define YCleanup i -> 0 || u y _ [ e | é ] "^" [ r a | n d o | r o n ], u y _ "^" ó;
+
 # Cleanup: remove morpheme boundaries
 define Cleanup "^" -> 0;
 
@@ -87,7 +90,8 @@ define Grammar MainLexicon .o.
         VerbDeletion    .o.
         RDeletion       .o.
         AReplacement    .o.
-        BugFix          .o.    
+        BugFix          .o. 
+        YCleanup        .o.   
 		Cleanup;
 
 regex Grammar ;
