@@ -16,6 +16,9 @@ define YInsertion [..] -> y || u _ i r "^" [ o | a | e | r a | n d o | r o n | ร
 define EIEReplacement e -> i e || _ C+ [ a r | e r ] "^" [ o.#. | s.#. | n.#. | e a | a e ];
 
 #
+define EIEReplacement2 e -> i e || _ [ n t i r | r i r | r t i r] "^" [ o.#. | s.#. | n.#. | e a | a e ],, e -> i || _ [ n t i r | r i r | r t i r] "^" [ n d o | รณ.#. | r o n | r a | i s ];
+
+#
 define OUEReplacement o -> u e || _ C+ [ a r | e r ] "^" [ o.#. | s.#. | n.#. | e a | a e ];
 
 #
@@ -83,6 +86,7 @@ define MainLexicon;
 define Grammar MainLexicon .o.
         YInsertion      .o.
         EIEReplacement  .o.
+        EIEReplacement2 .o.
         OUEReplacement  .o.
         SIReplacement   .o.
         PreferitoSimple .o.
