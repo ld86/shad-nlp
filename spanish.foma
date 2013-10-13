@@ -4,7 +4,7 @@
 define V [ a | e | i | o | u ];
 
 # Vowels
-define V2 [ ú | í ];
+define V2 [ ú | í | ó ];
 
 # Consonants
 define C [ b | c | c h | d | f | g | h | j | k | l | l l | m | n | ñ | p | q | r | s | t | v | w | x | z ];
@@ -61,14 +61,17 @@ define Preterito a r -> 0 || _ "^" ó;
 define BugFix r r e m o s -> e m o s || "^" _ .#.;
 
 # BugFix
-define BugFix2 c i ó n -> c i o n || _ "^";
+define BugFix2 c i ó n e -> c i o n e || _ "^";
+
+# BugFix
+define BugFix3 c i ó n -> c i o n || a _ "^";
 
 # A replacement: -o changes to -a,
 define AReplacement o -> 0 || _ "^" a;
 
 # E insertion e added after consonants before s
 # examples: papel^s:papeles; pez^s:peces; nariz^s:narices
-define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] [ C | V2 ] & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
+define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | V2 | C ] [ C | V2 ] & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
 
 # Bad Verbs Group 5
 define ZInsertion1 [..] -> z || _ c e r  "^" [ o .#. | a .#. | a s | a m o s | á i s | a n ];
@@ -110,6 +113,7 @@ define Grammar MainLexicon .o.
         AReplacement    .o.
         BugFix          .o.
         BugFix2         .o.
+        BugFix3         .o.
         YCleanup        .o.
         Cleanup;
 
