@@ -55,6 +55,10 @@ define AReplacement o -> 0 || _ "^" a;
 # examples: papel^s:papeles; pez^s:peces; nariz^s:narices
 define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] C & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
 
+# Bad Verbs Group 5
+define ZInsertion1 [..] -> z || _ c e r  "^" [ o | a | a s | a m o s | á i s | a n ];
+define Zinsertion2 [..] -> z || d u _ c i r  "^" [ o | a | a s | a m o s | á i s | a n ];
+
 # Cleanup: remove morpheme boundaries
 define Cleanup "^" -> 0;
 
@@ -78,6 +82,8 @@ define Grammar MainLexicon .o.
         Presente        .o.
         EAReplacement	.o.
         EInsertion      .o.
+        ZInsertion1  .o.
+        Zinsertion2  .o.
         VerbDeletion    .o.
         RDeletion       .o.
         AReplacement    .o.
