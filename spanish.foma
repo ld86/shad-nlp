@@ -37,7 +37,7 @@ define EAReplacement e a -> a, a e -> e || a r "^" _,, e a -> e, a e -> a || [ e
 define RDeletion r -> 0 || _"^" [ m o s | s | n | d | s t e | r o n | s t e i s | ó | r e | r a | s e ];
 
 # Presente de Indicativo
-define VerbDeletion [ a r | e r | i r ] -> 0 || _ "^" [ o | í .#. | a | e | é | á s | á | a m o s | e m o s | i m o s | é i s | á n ];
+define VerbDeletion [ a r | e r | i r ] -> 0 || _ "^" [ o | í .#. | a | e | é .#. | a m o s | e m o s | i m o s ];
 
 # Presente de Indicativo
 define Preterito a r -> 0 || _ "^" ó;
@@ -61,20 +61,19 @@ read lexc spanish.lexc
 define MainLexicon;
 
 define Grammar MainLexicon .o.
-		SIReplacement	.o.
+	SIReplacement	.o.
         PreferitoSimple .o.
         ERReplacement   .o.
         IRReplacement   .o.
         IEReplacement   .o.
         PreteritoImperfecto .o.
         Preterito       .o.
+        Presente        .o.
         EAReplacement	.o.
         EInsertion      .o.
         VerbDeletion    .o.
         RDeletion       .o.
         AReplacement    .o.    
 		Cleanup;
-
-define Exceptions [[{make} "+V" "+Past" .x. {made}] | [{make} "+V" "+PastPart" .x. {made}]] ;
 
 regex Grammar ;
