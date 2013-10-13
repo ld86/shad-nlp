@@ -56,8 +56,9 @@ define AReplacement o -> 0 || _ "^" a;
 define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] C & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
 
 # Bad Verbs Group 5
-define ZInsertion1 [..] -> z || _ c e r  "^" [ o | a | a s | a m o s | á i s | a n ];
-define Zinsertion2 [..] -> z || d u _ c i r  "^" [ o | a | a s | a m o s | á i s | a n ];
+define ZInsertion1 [..] -> z || _ c e r  "^" [ o .#. | a .#. | a s | a m o s | á i s | a n ];
+define Zinsertion2 [..] -> z || d u _ c i r  "^" [ o .#. | a .#. | a s | a m o s | á i s | a n ];
+define CJReplace c -> j || d u _ i r "^" [ í .#. | i s t e | i ó | i m o s | i s t e i s | i e r o n ];
 
 # YCleanup
 define YCleanup i -> 0 || u y _ [ e | é ] "^" [ r a | n d o | r o n ], u y _ "^" ó;
@@ -75,7 +76,7 @@ define MainLexicon;
 
 define Grammar MainLexicon .o.
         YInsertion      .o.
-	SIReplacement	.o.
+        SIReplacement   .o.
         PreferitoSimple .o.
         ERReplacement   .o.
         IRReplacement   .o.
@@ -83,15 +84,16 @@ define Grammar MainLexicon .o.
         PreteritoImperfecto .o.
         Preterito       .o.
         Presente        .o.
-        EAReplacement	.o.
+        EAReplacement   .o.
         EInsertion      .o.
-        ZInsertion1  .o.
-        Zinsertion2  .o.
+        ZInsertion1     .o.
+        Zinsertion2     .o.
+        CJReplace       .o.
         VerbDeletion    .o.
         RDeletion       .o.
         AReplacement    .o.
-        BugFix          .o. 
-        YCleanup        .o.   
-		Cleanup;
+        BugFix          .o.
+        YCleanup        .o.
+        Cleanup;
 
 regex Grammar ;
