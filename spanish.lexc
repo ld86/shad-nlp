@@ -12377,6 +12377,7 @@ u Ninf;
 
 LEXICON Verb
 
+Individual;
 abar Vinf;
 abajar Vinf;
 abalaustrar Vinf;
@@ -15202,6 +15203,67 @@ zarpear Vinf;
 zurcir Vinf;
 ser Vinf;
 ir Vinf;
+
+LEXICON Individual
+
+andar Vinf;
+andar+V:anduve #;
+andar+V:anduviera #;
+andar+V:anduviste #;
+andar+V:anduvieras #;
+andar+V:anduvo #;
+andar+V:anduviera #;
+andar+V:anduvimos #;
+andar+V:anduviéramos #;
+andar+V:anduvisteis #;
+andar+V:anduvierais #;
+andar+V:anduvieron #;
+andar+V:anduvieran #;
+
+caer Vinf;
+caer+V:caigo #;
+caer+V:caí #;
+caer+V:caiga #;
+caer+V:cayera #;
+caer+V:caes #;
+caer+V:caiste #;
+caer+V:cae #;
+caer+V:caigas #;
+caer+V:cayeras #;
+caer+V:cae #;
+caer+V:cayó #;
+caer+V:caemos #;
+caer+V:caímos #;
+caer+V:caigamos #;
+caer+V:cayéramos #;
+caer+V:caéis #;
+caer+V:caísteis #;
+caer+V:caed #;
+caer+V:caigáis #;
+caer+V:cayerais #;
+caer+V:caen #;
+caer+V:cayeron #;
+caer+V:caigan #;
+caer+V:cayeran #;
+caer+V:cayendo #;
+
+dar Vinf;
+decir Vinf;
+estar Vinf;
+haber Vinf;
+hacer Vinf;
+ir Vinf;
+oír Vinf;
+poder Vinf;
+poner Vinf;
+querer Vinf;
+saber Vinf;
+salir Vinf;
+ser Vinf;
+tener Vinf;
+traer Vinf;
+venir Vinf;
+ver Vinf;
 
 LEXICON Adj
 
