@@ -13,6 +13,12 @@ define Lexicon;
 define YInsertion [..] -> y || u _ i r "^" [ o | a | e | r a | n d o | r o n | ó ], u _ i r "^" [ s | n ].#.;
 
 #
+define EIEReplacement e -> i e || _ C+ [ a r | e r ] "^" [ o.#. | s.#. | n.#. | e a | a e ];
+
+#
+define OUEReplacement o -> u e || _ C+ [ a r | e r ] "^" [ o.#. | s.#. | n.#. | e a | a e ];
+
+#
 define SIReplacement a r -> é, [ e r | i r ] -> á || _ "^" i s.#.;
 
 #
@@ -76,6 +82,8 @@ define MainLexicon;
 
 define Grammar MainLexicon .o.
         YInsertion      .o.
+        EIEReplacement  .o.
+        OUEReplacement  .o.
         SIReplacement   .o.
         PreferitoSimple .o.
         ERReplacement   .o.
