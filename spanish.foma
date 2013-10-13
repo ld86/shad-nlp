@@ -13,7 +13,7 @@ define Lexicon;
 define SIReplacement a r -> é, [ e r | i r ] -> á || _ "^" i s.#.;
 
 #
-define Presente a r -> á, e r -> é, i r -> í || _ "^" i r.#. .o. "^" i r.#. -> "^" s || í _;
+define Presente a r -> á, e r -> é, i r -> 0 || _ "^" í s.#. .o. í s -> i s || [ á | é ] "^"_ .#.;
 
 #
 define PreferitoSimple í -> é, i m o s -> m o s || a r "^" _ .#.;
