@@ -37,10 +37,13 @@ define EAReplacement e a -> e, a e -> a || a r "^" _ ,, e a -> a, a e -> e || [ 
 define RDeletion r -> 0 || _"^" [ m o s | s | n | d | s t e | r o n | s t e i s | ó | r e | r a | s e | r é ];
 
 # Presente de Indicativo
-define VerbDeletion [ a r | e r | i r ] -> 0 || _ "^" [ o | í .#. | a | e | é .#. | a m o s | e m o s | i m o s ];
+define VerbDeletion [ a r | e r | i r ] -> 0 || _ "^" [ o | í .#. | a | e | é .#. | a m o s | i m o s ];
 
 # Presente de Indicativo
 define Preterito a r -> 0 || _ "^" ó;
+
+# BugFix
+define BugFix r r e m o s -> e m o s || "^" _ .#.;
 
 # A replacement: -o changes to -a,
 define AReplacement o -> 0 || _ "^" a;
@@ -73,7 +76,8 @@ define Grammar MainLexicon .o.
         EInsertion      .o.
         VerbDeletion    .o.
         RDeletion       .o.
-        AReplacement    .o.    
+        AReplacement    .o.
+        BugFix          .o.    
 		Cleanup;
 
 regex Grammar ;
