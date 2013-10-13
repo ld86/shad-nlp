@@ -93,12 +93,6 @@ def printWordLemmas(word, lemmas):
       A = i
     i += 1
 
-  if "+V" in flag and "+N" in flag:
-    lemmas = [lemmas[V]]
-
-  elif "+N" in flag and "+A" in flag:
-    lemmas = [lemmas[A]]
-
   print str(word) + '\t' + '\t'.join(lemmas)
 
 firstWordMode = True
