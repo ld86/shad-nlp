@@ -71,7 +71,7 @@ def runXCut(lemmas):
 def analizeWordLemmas(word, lemmas):
 	lemmas = runXCut(lemmas)
 	# lemmas = runAdjectiveKill(lemmas)
-	lemmas = run1CWins(lemmas)
+	# lemmas = run1CWins(lemmas)
 	lemmas = runShortestNoun(lemmas)
 	printWordLemmas(word, lemmas)
 
