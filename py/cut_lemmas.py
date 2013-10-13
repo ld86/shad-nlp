@@ -76,7 +76,30 @@ def analizeWordLemmas(word, lemmas):
 	printWordLemmas(word, lemmas)
 
 def printWordLemmas(word, lemmas):
-	print str(word) + '\t' + '\t'.join(lemmas)
+  flag = []
+  i = 0
+  N = 0
+  V = 0
+  A = 0
+  for lemma in lemmas:
+    if "+N" in lemma:
+      flag.append("+N")
+      N = i
+    if "+V" in lemma:
+      flag.append("+V")
+      V = i
+    if "+A" in lemma:
+      flag.append("+A")
+      A = i
+    i += 1
+
+  if "+V" in flag and "+N" in flag:
+    lemmas = [lemmas[V]]
+
+  elif "+N" in flag and "+A" in flag:
+    lemmas = [lemmas[A]]
+
+  print str(word) + '\t' + '\t'.join(lemmas)
 
 firstWordMode = True
 tempWord = ''
