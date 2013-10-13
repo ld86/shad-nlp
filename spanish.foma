@@ -13,7 +13,7 @@ define Lexicon;
 define SIReplacement a r -> é, [ e r | i r ] -> á || _ "^" i s.#.;
 
 #
-define Presente a r -> á, e r -> é, i r -> í || _ "^" i r .o. "^" i r -> "^" s || í _;
+define Presente a r -> á, e r -> é, i r -> í || _ "^" i r.#. .o. "^" i r.#. -> "^" s || í _;
 
 #
 define PreferitoSimple "^" í -> "^" é, "^" i m o s -> "^" m o s || a r _;
@@ -22,7 +22,7 @@ define PreferitoSimple "^" í -> "^" é, "^" i m o s -> "^" m o s || a r _;
 define ERReplacement  e r  -> i r || _ "^" [ s t e | d o | d a | s t e i s | ó ];
 
 # IRReplacement
-define IRReplacement  i r  -> e r || _ "^" [n | s].#.;
+define IRReplacement  i r  -> e r || _ "^" [ n | s ].#.;
 
 # IEReplacement
 define IEReplacement  [ e r | i r ]  -> i e || _ "^" [ r o n | r e | r a | s e | n d o] .o. e -> é, a r -> á || _ "^" [ r a m o s | s e m o s | r e m o s];
@@ -30,8 +30,11 @@ define IEReplacement  [ e r | i r ]  -> i e || _ "^" [ r o n | r e | r a | s e |
 # Preterito Imperfecto de Indicativo
 define PreteritoImperfecto [ e r | i r ] -> í, a r -> a b || _ "^" [ a | a s | a i s | a n ].#. .o. a r -> á b || _ "^" a m o s.#.; 
 
+#
+define EAReplacement e a -> a, a e -> e || a r "^" _,, e a -> e, a e -> a || [ e r | i r ] "^"_;
+
 # R deletion
-define RDeletion r -> 0 || _"^" [m o s | s | n | d | s t e | r o n | s t e i s | ó | r e | r a | s e ];
+define RDeletion r -> 0 || _"^" [ m o s | s | n | d | s t e | r o n | s t e i s | ó | r e | r a | s e ];
 
 # Presente de Indicativo
 define VerbDeletion [ a r | e r | i r ] -> 0 || _ "^" [ o | í | í a | a | e | é | á s | á | e m o s | i m o s | é i s | á n ];
@@ -65,6 +68,7 @@ define Grammar MainLexicon .o.
         IEReplacement   .o.
         PreteritoImperfecto .o.
         Preterito       .o.
+        EAReplacement	.o.
         EInsertion      .o.
         VerbDeletion    .o.
         RDeletion       .o.

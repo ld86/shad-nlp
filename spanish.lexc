@@ -22120,6 +22120,8 @@ LEXICON Ninf
 
 LEXICON Vinf
 
++V:0 #;
+
 +V:^do #;
 +V:^da #;
 +V:^das #;
@@ -22127,8 +22129,8 @@ LEXICON Vinf
 
 +V:^ndo #;
 
-+V:^a #;
-+V:^e #;
++V:^ae #;
++V:^ea #;
 +V:^d #;
 
 +V:^o #;
