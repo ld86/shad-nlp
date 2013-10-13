@@ -3,8 +3,11 @@
 # Vowels
 define V [ a | e | i | o | u ];
 
+# Vowels
+define V2 [ ú | í ];
+
 # Consonants
-define C [ b | c | c h | d | f | g | h | j | k | l | l l | m | n | ñ | p | q | r | s | t | v | w | x | z | ú ];
+define C [ b | c | c h | d | f | g | h | j | k | l | l l | m | n | ñ | p | q | r | s | t | v | w | x | z ];
 
 read lexc spanish.lexc
 define Lexicon;
@@ -62,7 +65,7 @@ define AReplacement o -> 0 || _ "^" a;
 
 # E insertion e added after consonants before s
 # examples: papel^s:papeles; pez^s:peces; nariz^s:narices
-define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] C & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
+define EInsertion z -> c || _ "^" s .o. [..] -> e || [[ V | C ] [ C | V2 ] & ~[[a | e | i ] r]] | .#.C _ "^" s.#.;
 
 # Bad Verbs Group 5
 define ZInsertion1 [..] -> z || _ c e r  "^" [ o .#. | a .#. | a s | a m o s | á i s | a n ];
